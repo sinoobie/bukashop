@@ -91,4 +91,7 @@ Toko   : {i[2]}
 		go = [(i['itemid'],i['shopid']) for i in r['items']]
 		ThreadPool(15).map(res,go)
 
-Bukasop()
+try:
+	Bukasop()
+except Exception as EF:
+	print(f"Err: {EF}")
