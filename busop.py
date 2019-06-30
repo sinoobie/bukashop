@@ -51,9 +51,11 @@ Toko   : {i[2]}
 ++++++++++++++++++++++++++++++++++++++''')
 			urls.append(i[3])
 			count+=1
-		pil=int(input("\n[?] pilih no: "))
-		print("Meluncur gann..");time.sleep(1)
-		click.launch(urls[pil-1])
+		print('\n[!] CTRL+C untuk keluar')
+		while True:
+			pil=int(input("[?] pilih no: "))
+			print("Meluncur gann..");time.sleep(1)
+			click.launch(urls[pil-1])
 
 	def bl(self):
 		url=[self.b+'/products?keywords='+self.q+'&search[sort_by]=_score:desc']
@@ -94,4 +96,4 @@ Toko   : {i[2]}
 try:
 	Bukasop()
 except Exception as EF:
-	print(f"Err: {EF}")
+	print(f'Err {EF}')
